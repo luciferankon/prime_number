@@ -1,0 +1,29 @@
+let counter=2,number=5,no=number,n=1;
+while(counter!=300001){
+  for(let index=2;index<=Math.sqrt(number);index++){
+    if(number%index==0){
+      if(number==6*n-1){
+        number=6*n+1;
+      }
+      else{
+        n++;
+        number=6*n-1;
+      }
+      break;
+    }
+  }
+  if(no==number){
+    if(number==6*n-1){
+      output=number;
+      number=6*n+1;
+    }
+    else{
+      n++;
+      output=number;
+      number=6*n-1;
+    }
+    counter++;
+  }
+  no=number;
+}
+console.log(output);
